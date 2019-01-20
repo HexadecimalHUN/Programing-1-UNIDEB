@@ -1,0 +1,9 @@
+(defun factorial (n)
+  (if (= n 1)              
+      1                           
+      (* n (factorial (- n 1))))) 
+
+(write-line "Please enter a number...")
+(finish-output)              ; this makes sure the text is printed now
+(let ((x (read)))
+ (format t "~D! is ~D" x (factorial x)))
